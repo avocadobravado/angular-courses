@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
 import { CourseComponent } from './course/course.component';
 
+import { CoursesService } from './courses.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +20,10 @@ import { CourseComponent } from './course/course.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  // Dependency injection
+  providers: [
+    CoursesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
